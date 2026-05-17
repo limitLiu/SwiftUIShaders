@@ -34,7 +34,6 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
-				Shaders/Common.h.metal,
 			);
 			target = 0FDFFE5D2E16BF1900F6DCB6 /* SwiftUIShaders */;
 		};

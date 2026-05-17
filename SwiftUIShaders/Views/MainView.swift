@@ -1,6 +1,7 @@
 import SwiftUI
 
 enum AppRoute: Hashable {
+  case helloWorld
   case moon
   case algorithmicDrawing
 }
@@ -8,6 +9,7 @@ enum AppRoute: Hashable {
 extension AppRoute: CustomStringConvertible {
   var description: String {
     switch self {
+    case .helloWorld: "Hello World"
     case .moon: "Moon"
     case .algorithmicDrawing: "Algorithmic Drawing"
     }
@@ -15,7 +17,7 @@ extension AppRoute: CustomStringConvertible {
 }
 
 struct MainView: View {
-  let data: [AppRoute] = [.moon, .algorithmicDrawing]
+  let data: [AppRoute] = [.helloWorld, .moon, .algorithmicDrawing]
 
   var body: some View {
     NavigationStack {
@@ -24,8 +26,10 @@ struct MainView: View {
           Text(it.description).padding()
         }
       }
+      .navigationTitle("Shaders Playground")
       .navigationDestination(for: AppRoute.self) {
         switch $0 {
+        case .helloWorld: HelloWorld()
         case .moon: MoonView()
         case .algorithmicDrawing: AlgorithmicDrawingView()
         }
