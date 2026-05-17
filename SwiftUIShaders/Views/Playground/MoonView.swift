@@ -27,6 +27,5 @@ struct MoonView: View {
           .frame(maxWidth: .infinity, maxHeight: .infinity)
       }
     }
-    .ignoresSafeArea()
   }
 }

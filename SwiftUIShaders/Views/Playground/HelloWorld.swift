@@ -18,6 +18,5 @@ struct HelloWorld: View {
           .colorEffect(ShaderLibrary.coord(.float2(proxy.size)))
       }
     }
-    .ignoresSafeArea()
   }
 }
